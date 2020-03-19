@@ -35,6 +35,8 @@
     <string name="contin">Continue</string>
     <string name="createAccount">Create Account</string>
     <string name="settings">Settings</string>
-
+    <string name="addCut">Add HairCut</string>
+    <string name="payment">Payment</string>
+    <string name="adminDashboard">Admin DashBoard</string>
 
 </resources>
