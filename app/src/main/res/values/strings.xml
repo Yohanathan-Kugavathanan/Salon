@@ -18,4 +18,23 @@
     </string-array>
     <string name="condition">By signing up, you agree to our Terms and Conditions and Privacy policy</string>
     <string name="contin">Continue</string>
-</resources>
+
+    <string name="text2_">Select your preferred time</string>
+<string name="text1_">Start your appointment here</string>
+<string name="proceed_">Proceed</string>
+<string name="slot1">09.00am-09.30am</string>
+<string name="slot2">09.30am-10.00am</string>
+<string name="slot3">10.00am-10.30am</string>
+<string name="slot4">10.30am-11.00am</string>
+<string name="slot5">11.00am-11.30am</string>
+<string name="slot6">11.30am-12.00pm</string>
+<string name="slot7">12.00pm-12.30pm</string>
+<string name="slot8">03.00pm-03.30pm</string>
+<string name="slot9">03.30pm-04.00pm</string>
+<string name="slot10">04.00pm-04.30pm</string>
+<string name="slot11">04.30pm-05.00pm</string>
+<string name="slot12">05.00pm-05.30pm</string>
+<string name="proceed2_">Proceed</string>
+    <string name="tap">Tap here to select a date</string>
+
+    </resources>
