@@ -16,5 +16,8 @@
     <string name="slot10">04.00pm-04.30pm</string>
     <string name="slot11">04.30pm-05.00pm</string>
     <string name="slot12">05.00pm-05.30pm</string>
-    <string name="proceed2_">Proceed</string>
+    <string name="text3_">Select a haircut</string>
+    <string name="button_haircut">Tap here</string>
+    <string name="proceed2_">Submit</string>
+    <string name="tvDate">Tap here to select a date</string>
 </resources>

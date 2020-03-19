@@ -27,8 +27,11 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="300dp"
+        android:backgroundTint="@android:color/background_light"
         android:hint="Tap here to select a date"
-        android:textSize="20sp" />
+        android:textColor="@android:color/black"
+        android:textSize="20sp"
+        tools:text="@string/tvDate" />
 
     <Button
         android:id="@+id/proceed_"
@@ -37,9 +40,9 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="400dp"
-        android:backgroundTint="@color/design_default_color_secondary"
+        android:backgroundTint="@color/endBlue"
         android:hint="Proceed"
-        android:textColor="@color/design_default_color_background"
+        android:textColor="@color/grayLight"
         android:textSize="20sp"
         tools:text="@string/proceed_" />
 
