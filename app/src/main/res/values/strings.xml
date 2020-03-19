@@ -38,5 +38,5 @@
     <string name="addCut">Add HairCut</string>
     <string name="payment">Payment</string>
     <string name="adminDashboard">Admin DashBoard</string>
-
+    <string name="feedback">Feedback</string>
 </resources>
