@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Saloon</string>
     <string name="date_text">Schedule the date here</string>
-    <string name="text2_">Select your prefered time</string>
+    <string name="text2_">Select your preferred time</string>
     <string name="text1_">Start your appointment here</string>
     <string name="proceed_">Proceed</string>
     <string name="slot1">09.00am-09.30am</string>
@@ -17,4 +17,24 @@
     <string name="slot11">04.30pm-05.00pm</string>
     <string name="slot12">05.00pm-05.30pm</string>
     <string name="proceed2_">Proceed</string>
+    <string name="userName">User Name</string>
+    <string name="search">Search Shop</string>
+    <string name="shop">Shop</string>
+    <string name="editInfo">Edit Info</string>
+    <string name="pastBookings">Past Bookings</string>
+    <string name="bookings">Bookings</string>
+    <string name="offers">Offers</string>
+    <string name="help">Help</string>
+    <string name="fname">First Name</string>
+    <string name="lname">last name</string>
+    <string name="email">Email</string>
+    <string name="phoneNo">Phone Number</string>
+    <string name="password">Password</string>
+    <string name="city">City</string>
+    <string name="condition">I accept the Terms and Conditions including privacy</string>
+    <string name="contin">Continue</string>
+    <string name="createAccount">Create Account</string>
+    <string name="settings">Settings</string>
+
+
 </resources>

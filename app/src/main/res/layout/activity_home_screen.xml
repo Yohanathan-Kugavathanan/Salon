@@ -10,8 +10,7 @@
 </androidx.constraintlayout.widget.ConstraintLayout>
 -->
 
-<LinearLayout  xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -55,7 +54,7 @@
                     android:layout_gravity="center_horizontal"
                     android:text="Login"
                     android:textAlignment="center"
-                    android:textSize="30dp"
+                    android:textSize="30sp"
                     android:background="@color/greyishGreen"
                     android:fontFamily="sans-serif"
                     android:textStyle="bold"
@@ -102,8 +101,8 @@
                     android:text=" Create new Account? Click here "
                     android:textSize="14sp"
                     android:textAllCaps="false"
-                    android:background="#ffffff"
-                   android:textColorLink="@color/cardview_light_background"
+                    android:background="@color/startBlue"
+                   android:textColorLink="@color/midBlue"
 
                     />
 

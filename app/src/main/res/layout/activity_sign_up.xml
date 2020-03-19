@@ -8,8 +8,7 @@
 
 </androidx.constraintlayout.widget.ConstraintLayout>-->
 
-<LinearLayout  xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -33,6 +32,7 @@
         android:id="@+id/lay1"
         android:layout_width="380dp"
         android:paddingLeft="5dp"
+        android:paddingRight="5dp"
         android:layout_height="400dp"
         android:layout_gravity="start"
         android:layout_marginTop="40dp"
@@ -56,7 +56,8 @@
                 android:layout_width="220dp"
                 android:layout_height="50dp"
                 android:layout_marginTop="1dp"
-                android:paddingLeft="15sp" />
+                android:paddingLeft="15sp"
+                android:paddingRight="5dp"/>
         </LinearLayout>
 
         <LinearLayout
@@ -75,7 +76,8 @@
                 android:layout_width="220dp"
                 android:layout_height="50dp"
                 android:layout_marginTop="1dp"
-                android:paddingLeft="15sp" />
+                android:paddingLeft="15sp"
+                android:paddingRight="5dp"/>
 
         </LinearLayout>
 
@@ -89,6 +91,7 @@
             android:layout_gravity="start"
             android:paddingTop="10sp"
             android:paddingRight="5dp"
+            android:paddingLeft="5dp"
             android:paddingBottom="10sp"
             android:text="@string/email"
             android:textSize="21sp" />
@@ -96,7 +99,9 @@
                 android:layout_width="220dp"
                 android:layout_height="50dp"
                 android:layout_marginTop="1dp"
-                android:paddingLeft="15sp" />
+                android:paddingLeft="15sp"
+                android:paddingRight="5dp"
+                />
 
 
         </LinearLayout>
@@ -110,6 +115,7 @@
             android:layout_gravity="start"
             android:paddingTop="10sp"
             android:paddingRight="5dp"
+            android:paddingLeft="5dp"
             android:paddingBottom="10sp"
             android:text="@string/phoneNo"
             android:textSize="21sp" />
@@ -129,6 +135,7 @@
             android:layout_gravity="left"
             android:paddingTop="10sp"
             android:paddingRight="5dp"
+            android:paddingLeft="5dp"
             android:paddingBottom="10sp"
             android:text="@string/password"
             android:textSize="21sp" />
@@ -136,7 +143,8 @@
                 android:layout_width="220dp"
                 android:layout_height="50dp"
                 android:layout_marginTop="1dp"
-                android:paddingLeft="15sp" />
+                android:paddingLeft="15sp"
+                android:paddingRight="5dp"/>
 
         </LinearLayout>
 
@@ -150,11 +158,12 @@
                 android:layout_gravity="start"
                 android:paddingTop="10sp"
                 android:paddingRight="5dp"
+                android:paddingLeft="5dp"
                 android:paddingBottom="10sp"
                 android:text="@string/city"
                 android:textSize="21sp" />
             <Spinner
-                android:id="@id/city"
+                android:id="city"
                 android:layout_width="220dp"
                 android:layout_height="wrap_content"
                 android:dropDownWidth="wrap_content"
