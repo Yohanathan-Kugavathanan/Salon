@@ -30,6 +30,7 @@
             android:textStyle="bold"
             android:textSize="40sp"
             />
+        
 
     </LinearLayout>
 
@@ -118,9 +119,12 @@
         android:id="@+id/button6"
         android:layout_width="79dp"
         android:layout_height="80dp"
+        android:layout_marginTop="544dp"
         android:background="@drawable/ic_settings_black_24dp"
-        tools:layout_editor_absoluteX="58dp"
-        tools:layout_editor_absoluteY="539dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.189"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView2"
