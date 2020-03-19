@@ -1,3 +1,21 @@
 <resources>
     <string name="app_name">Saloon</string>
+    <string name="createAccount">Lets Begin by creating Account</string>
+    <string name="fname">First Name</string>
+    <string name="lname">Last Name</string>
+    <string name="email">Email Address</string>
+    <string name="phoneNo">Phone Number</string>
+    <string name="password">Password</string>
+    <string name="city">City</string>
+    <string-array name="city_array">
+        <item>Colombo1</item>
+        <item>Colombo2</item>
+        <item>Colombo3</item>
+        <item>Colombo4</item>
+        <item>Colombo5</item>
+        <item>Colombo6</item>
+
+    </string-array>
+    <string name="condition">By signing up, you agree to our Terms and Conditions and Privacy policy</string>
+    <string name="contin">Continue</string>
 </resources>
