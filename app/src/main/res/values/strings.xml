@@ -18,7 +18,9 @@
     </string-array>
     <string name="condition">By signing up, you agree to our Terms and Conditions and Privacy policy</string>
     <string name="contin">Continue</string>
-
+    <string name="search">Search</string>
+    <string name="userName">userName</string>
+    <string name="shop">shop</string>
     <string name="text2_">Select your preferred time</string>
 <string name="text1_">Start your appointment here</string>
 <string name="proceed_">Proceed</string>
@@ -36,5 +38,11 @@
 <string name="slot12">05.00pm-05.30pm</string>
 <string name="proceed2_">Proceed</string>
     <string name="tap">Tap here to select a date</string>
+    <string name="editInfo">Edit Info</string>
+    <string name="pastBookings">Past Bookings</string>
+    <string name="bookings">Bookings</string>
+    <string name="offers">Offers</string>
+    <string name="help">Help</string>
+    <string name="settings">settings</string>
 
-    </resources>
+</resources>
