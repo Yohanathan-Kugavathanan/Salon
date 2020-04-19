@@ -11,4 +11,6 @@
     <color name="greyishGreen">#aab5ac</color>
     <color name="white">#ffffff</color>
 
+    <color name="colorButton">#373738</color>
+    <color name="colorBackground">#FDF9EE</color>
 </resources>
