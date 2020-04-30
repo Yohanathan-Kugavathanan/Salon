@@ -40,4 +40,33 @@
     <string name="adminDashboard">Admin DashBoard</string>
     <string name="feedback">Feedback</string>
     <string name="salon">Ultra Salon</string>
+
+
+    <string name="salon_hub">Salon Hub</string>
+    <string name="proceed">Proceed</string>
+    <string name="create">Create</string>
+    <string name="click_for_newacc">Create new Account? Click here</string>
+    <string name="forgot_password">Forgot_Password?</string>
+    <string name="sign_in">Sign In</string>
+    <string name="tp_num">+94 776662542</string>
+    <string name="sign_out">Sign Out</string>
+    <string name="my_cart" />
+    <string name="commnunicate" />
+    <string-array name="cities">
+        <item> </item>
+        <item>Colombo-1</item>
+        <item>Colombo-2</item>
+    </string-array>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="send">send</string>
+    <string name="share">Share</string>
+    <string name="profile" />
+    <string name="log_out">Log out</string>
+    <string name="home">Home</string>
+    <string name="booking">Booking</string>
+    <string name="notification">Notification</string>
+    <string name="message_fragment">Message fragment</string>
+
+
 </resources>

@@ -1,86 +1,182 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/drawer_layout"
+    android:fitsSystemWindows="true"
+    tools:openDrawer="start"
+
+    >
+
+
+
+
+<RelativeLayout android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+
+
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/colorBackground"
-    tools:context=".BookingActivity">
+    android:padding="10dp"
+    tools:context=".booking"
+        >
+
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/purple"
+            android:elevation="4dp"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            app:title="@string/salon_hub"
+            app:titleTextColor="@color/white"
+            />
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:text="Appointment Date"
+            android:textSize="25dp"
+            android:padding="20dp"
+            android:textColor="@color/black"
+            />
 
 
 
 
-    <com.shuhart.stepview.StepView
-        android:id="@+id/step_view"
+
+
+
+        <!--Editext:Input Title as string-->
+    <EditText
+        android:id="@+id/datEt"
+        android:layout_margin="2dp"
+        android:background="@drawable/bg_edittext"
+        android:padding="10dp"
+        android:hint="Enter Your Preferred Date"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="16dp"
-        app:sv_animationType="None"
-        app:sv_stepPadding="12dp"
+        android:inputType="text" />
 
-        app:sv_selectedCircleColor="@color/colorButton"
-        app:sv_selectedStepNumberColor="@android:color/white"
-        app:sv_selectedTextColor="@color/colorButton"
 
-        app:sv_doneCircleColor="@color/colorAccent"
-        app:sv_doneStepLineColor="@color/colorAccent"
-        app:sv_doneTextColor="@android:color/white"
-        app:sv_doneStepMarkColor="@android:color/white"
 
-        app:sv_typeface="@font/bellerose"
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:text="Appointment Time"
+            android:textSize="25dp"
+            android:padding="20dp"
+            android:textColor="@color/black"
+            />
+
+
+
+
+    <!--Edittext: input Description as a string-->
+    <EditText
+        android:id="@+id/timEt"
+        android:layout_margin="2dp"
+        android:background="@drawable/bg_edittext"
+        android:padding="10dp"
+        android:hint="Enter Your Preferred Time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="text"/>
+
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:text="Number Of Appointments"
+            android:textSize="25dp"
+            android:padding="20dp"
+            android:textColor="@color/black"
+            />
+
+
+
+
+    <!--Edittext: input number of appointments as a string-->
+    <EditText
+        android:id="@+id/numbrEt"
+        android:layout_margin="2dp"
+        android:background="@drawable/bg_edittext"
+        android:padding="10dp"
+        android:hint="Number Of Appointments"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="text"/>
+
+
+
+
+
+    <!--Button save /upload data to fire base cloud firestore-->
+    <Button
+        android:id="@+id/saveBtn"
+        android:text="Submit"
+        android:background="@color/yellow"
+        android:textColor="@color/white"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+
         />
 
 
-    <com.example.saloon.Common.NoneSwipeViewPager
-        android:id="@+id/view_pager"
-        android:layout_below="@+id/step_view"
-        android:layout_above="@+id/layout_button"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+    <!--start list activity to show firestore data -->
+    <Button
+        android:id="@+id/listBtn"
+        android:text="View Appointments"
+        android:background="@color/yellow"
+        android:textColor="@color/white"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"/>
 
-    <LinearLayout
-        android:id="@+id/layout_button"
-        android:orientation="horizontal"
-        android:weightSum="2"
-        android:padding="4dp"
+
+
+
+
+</LinearLayout>
+
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_nav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" >
-
-
-        <Button
-            android:id="@+id/btn_previous_step"
-            android:text="Previous"
-            android:enabled="false"
-            android:fontFamily="@font/bellerose"
-            android:layout_centerHorizontal="true"
-            android:layout_above="@+id/txt_skip"
-            android:layout_width="0dp"
-            android:layout_marginRight="4dp"
-            android:background="@color/colorButton"
-            android:textColor="@android:color/white"
-            android:layout_weight="1"
-            android:layout_height="wrap_content" />
+        android:background="@color/purple"
+        app:itemIconTint="@color/white"
+        app:itemTextColor="@color/white"
+        app:menu="@menu/bottom_menu" />
 
 
 
-        <Button
-            android:id="@+id/btn_next_step"
-            android:enabled="false"
-            android:text="Next"
-            android:layout_marginLeft="4dp"
-            android:background="@color/colorButton"
-            android:textColor="@android:color/white"
-            android:fontFamily="@font/bellerose"
-            android:layout_centerHorizontal="true"
-            android:layout_above="@+id/txt_skip"
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="wrap_content" />
 
-
-
-    </LinearLayout>
 
 </RelativeLayout>
+</androidx.drawerlayout.widget.DrawerLayout>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view"
+    >
+
+    <group
+        android:checkableBehavior="single"
+        android:enabled="true"
+        android:visible="true">
+
+
+        <item
+            android:id="@+id/nav_profile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:icon="@drawable/ic_account_circle_black_24dp"
+            android:title="Profile"
+
+            />
+        <item
+            android:id="@+id/nav_offer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:icon="@drawable/ic_local_offer_black_24dp"
+            android:title="@string/offers"
+
+
+            />
+
+
+        <item
+            android:id="@+id/nav_setting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:icon="@drawable/ic_settings_black_24dp"
+            android:title="Settings"
+
+            />
+        <item
+            android:id="@+id/nav_help"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:icon="@drawable/ic_help_black_24dp"
+            android:title="Help"
+
+            />
+
+    </group>
+
+    <item android:title="@string/commnunicate">
+        <menu>
+            <item
+                android:id="@+id/nav_share"
+                android:icon="@drawable/ic_share_black_24dp"
+                android:title="@string/share"
+                />
+            <item
+                android:id="@+id/nav_send"
+                android:icon="@drawable/ic_lock_open_black_24dp"
+                android:title="@string/log_out"
+                />
+
+        </menu>
+
+    </item>
+
+
+</menu>
