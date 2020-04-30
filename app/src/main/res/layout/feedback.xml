@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="10dp"
-    tools:context=".MainFeedback">
+    tools:context=".Mainfeedback">
 
     <!--Editext:Input Title as string-->
     <EditText
@@ -37,8 +37,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
+        android:background="@color/yellow"
         android:text="Save"
         android:textSize="24sp" />
+
+
+
 
     <!--start list activity to show firestore data -->
     <Button
@@ -47,6 +51,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
+        android:background="@color/yellow"
         android:text="View Feedback"
         android:textSize="24sp" />
 

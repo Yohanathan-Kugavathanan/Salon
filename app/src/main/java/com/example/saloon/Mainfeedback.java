@@ -17,14 +17,16 @@ import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.firestore.FirebaseFirestore;
 
+import org.w3c.dom.Comment;
+
 import java.util.HashMap;
 import java.util.Map;
 import java.util.UUID;
 
 
-public class MainFeedback extends AppCompatActivity {
+public class Mainfeedback extends AppCompatActivity {
     //Views
-    EditText mTitleEt, mCommentEt;
+    EditText mTitleEt, mCommentEt,mId;
     Button mSaveBtn,mListBtn;
 
     //progress dialog
@@ -33,14 +35,15 @@ public class MainFeedback extends AppCompatActivity {
     //Firestore instance
     FirebaseFirestore db ;
 
-    String pTitle,pComment;
+    String pTitle,pComment,pId;
 
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.Feedback);
+        setContentView(R.layout.feedback);
+
 
 
         //add internet permission in manifest
@@ -59,13 +62,15 @@ public class MainFeedback extends AppCompatActivity {
             //Update
             mSaveBtn.setText("Update");
             //get data
+            pId=bundle.getString("pId");
             pTitle=bundle.getString("pTitle");
             pComment=bundle.getString("pComment");
 
             //set data
-
+             mId.setText(pId);
              mTitleEt.setText(pTitle);
              mCommentEt.setText(pComment);
+
         }
         else{
             //New data
@@ -88,63 +93,69 @@ public class MainFeedback extends AppCompatActivity {
         mSaveBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //input data
-                String title = mTitleEt.getText().toString().trim();
-                String comment = mCommentEt.getText().toString().trim();
+                Bundle bundle1=getIntent().getExtras();
+                if(bundle!=null){
+                    //Updating
+                    //input data
+                    String id=pId;
+                    String title=mTitleEt.getText().toString().trim();
+                    String comment=mCommentEt.getText().toString().trim();
 
-                //function call to upload data
-                uploadData(title, comment);
 
 
+                    //function call to update data
+                    updateData(id,title,comment);
+
+
+                }
+                else{
+                    //Adding new
+
+                    //input data
+
+
+
+                    String title=mTitleEt.getText().toString().trim();
+                    String comment=mCommentEt.getText().toString().trim();
+
+                    //function call to upload data
+                    uploadData(title,comment);
+
+
+                }
             }
-             else{
 
 
-                //Adding new
-
-                //input data
-
-                String title = mTitleEt.getText().toString().trim();
-                String comment = mCommentEt.getText().toString().trim();
-
-                //function call to upload data
-                uploadData(title, comment);
-
-
-            }
-
-
-        }
-    });
-    // Click btn to start list activity
+        });
+        // Click btn to start list activity
         mListBtn.setOnClickListener(new View.OnClickListener() {
-        @Override
-        public void onClick(View view) {
-            startActivity(new Intent(MainFeedback.this,feedback.class));
-            finish();
-        }
-    });
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(Mainfeedback.this,ListActivity.class));
+                finish();
+            }
+        });
 
 
 
 
 
-}
+    }
 
-    private void updateData(String title,String comment) {
+    private void updateData(String id, String title, String comment) {
         //set title to progress bar
         pd.setTitle("Your Appointment is being Updated");
         //show progress bar when user click save button
         pd.show();
 
-        db.collection("Bookings").document(title)
+        db.collection("Bookings").document(id)
                 .update("Title",title,"Comment",comment )
                 .addOnCompleteListener(new OnCompleteListener<Void>() {
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {
                         //called when Updated successfully
                         pd.dismiss();
-                        Toast.makeText(MainFeedback.this, "Appointment is Updated", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(Mainfeedback.this, "Appointment is Updated", Toast.LENGTH_SHORT).show();
 
 
                     }
@@ -155,34 +166,36 @@ public class MainFeedback extends AppCompatActivity {
                         //called when there is an error
                         pd.dismiss();
                         //get and show error message
-                        Toast.makeText(MainFeedback.this, e.getMessage(), Toast.LENGTH_SHORT).show();
+                        Toast.makeText(Mainfeedback.this, e.getMessage(), Toast.LENGTH_SHORT).show();
                     }
                 });
 
     }
 
-    private void uploadData(String title,String comment) {
+    private void uploadData(String id, String title, String comment) {
         //set title to progress bar
-        pd.setTitle("Your Feedback is being Submitted");
+        pd.setTitle("Your Appointment is being Submitted");
         //show progress bar when user click save button
         pd.show();
         //random id for each data to be stored
-        String title= UUID.randomUUID().toString();
+        String id= UUID.randomUUID().toString();
 
         Map<String, Object> doc=new HashMap<>();
-        doc.put("title",title); //id of data
-        doc.put("Comment",comment);
+        doc.put("id",id); //id of data
+        doc.put("Title", title);
+        doc.put("Comment", Comment);
+
 
 
         //addd this data
-        db.collection("Bookings").document(title).set(doc)
+        db.collection("Bookings").document(id).set(doc)
                 .addOnCompleteListener(new OnCompleteListener<Void>() {
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {
                         //this will be called whem data is added successfully
 
                         pd.dismiss();
-                        Toast.makeText(MainFeedback.this, "Appointment Submitted", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(Mainfeedback.this, "Appointment Submitted", Toast.LENGTH_SHORT).show();
                     }
                 })
                 .addOnFailureListener(new OnFailureListener() {
@@ -192,7 +205,7 @@ public class MainFeedback extends AppCompatActivity {
 
                         pd.dismiss();
                         //get and show error message
-                        Toast.makeText(MainFeedback.this, e.getMessage(), Toast.LENGTH_SHORT).show();
+                        Toast.makeText(Mainfeedback.this, e.getMessage(), Toast.LENGTH_SHORT).show();
                     }
                 });
 

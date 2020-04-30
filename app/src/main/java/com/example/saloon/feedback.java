@@ -1,12 +1,18 @@
 package com.example.saloon;
 
 public class feedback {
+    String id;
     String title;
-     String  comment;
+    String  comment;
 
-    public feedback(String title, String comment) {
+
+
+
+    public feedback(,String id,String title, String comment,) {
         this.title = title;
         this.comment = comment;
+        this.id = id;
+
     }
 
     public String getTitle() {
@@ -25,13 +31,11 @@ public class feedback {
         this.comment = comment;
     }
 
-    public feedback() {
+    public String getId() {
+        return id;
+    }
 
-
-
-
-
-
-
+    public void setId(String id) {
+        this.id = id;
     }
 }
