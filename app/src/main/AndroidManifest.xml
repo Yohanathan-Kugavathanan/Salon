@@ -19,13 +19,17 @@
         <activity android:name=".booking" />
         <activity android:name=".SignUp" />
         <activity android:name=".UserDashboard" />
-        <activity android:name=".Profile">
+        <activity android:name=".MainHairCut"/>
+        <activity android:name=".MainHairCut2Details"/>
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </activity>
     </application>
 
 </manifest>
